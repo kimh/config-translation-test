@@ -1,13 +1,17 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: kimh/picard-trusty:5740
+#version: 2
+#jobs:
+#  build:
+#    docker:
+#      - image: kimh/picard-trusty:5740
+#
+#    working_directory: /tmp/code
+#    steps:
+#      - checkout
+#      - run: echo hello
+dependencies:
+  override:
+    - exit 0
 
-    working_directory: /tmp/code
-    steps:
-      - checkout
-      - run: echo hello
-
-
-
+machine:
+  override:
+    - exit 0
