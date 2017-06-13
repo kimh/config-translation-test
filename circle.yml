@@ -1,7 +1,13 @@
-dependencies:
-  override:
-    - echo hi
+version: 2
+jobs:
+  build:
+    docker:
+      - image: kimh/picard-trusty:5740
 
-test:
-  override:
-    - echo hi
+    working_directory: /tmp/code
+    steps:
+      - checkout
+      - run: echo hello
+
+
+
